@@ -110,11 +110,21 @@ function App() {
               <span>System Nodes</span>
             </h3>
             <div className="node-palette">
-              <div className="palette-item" draggable data-type="automated">
+              <div
+                className="palette-item"
+                draggable
+                onDragStart={(event) => onDragStart(event, "automated")}
+                data-type="automated"
+              >
                 <div className="palette-icon">⚡</div>
                 <span>Automated</span>
               </div>
-              <div className="palette-item" draggable data-type="end">
+              <div
+                className="palette-item"
+                draggable
+                onDragStart={(event) => onDragStart(event, "end")}
+                data-type="end"
+              >
                 <div className="palette-icon">🏁</div>
                 <span>End</span>
               </div>
